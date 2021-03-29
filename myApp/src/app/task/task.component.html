@@ -1,0 +1,7 @@
+
+<div class="taskWrapper" [ngClass]="{'complStyle':oneTask.isCompleted}">
+    <input type="checkbox" (change)="onChangeHandler()" [checked]='oneTask.isCompleted'>
+    <span class="Text">{{oneTask.text}}</span>
+    <button (click)="deleteHandler()">Delete</button>
+    <span class="date">{{oneTask.taskDate | date: 'shortDate'}}</span>
+</div>

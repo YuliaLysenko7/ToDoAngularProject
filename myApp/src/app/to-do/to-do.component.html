@@ -1,0 +1,21 @@
+<div class="countWrapper">
+    <!-- <h1>{{counter}}</h1>
+    <div class="buttonWraper">
+    <button *ngIf='counter<=10' (click)="addOne()">Плюс один</button>
+    <button (click)="minusOne()">Минус один</button>
+    </div>
+    <h3 *ngFor='let user of users'>{{user.name}}</h3> -->
+    <button (click)="showArray()">showArray</button>
+    <!-- <h3 *ngFor='let task of taskArray'>{{task.text}}</h3> -->
+    <app-input (textEmiter)=addNewTaskAppHandler($event)></app-input>
+    <ng-template [ngIf]='taskArray.length>0' 
+        [ngIfElse]=' listTemplate' >
+        <app-task 
+     *ngFor='let task of taskArray' [oneTask]='task'(delEmiter)=deleteHandler($event) (changeEmiter)= isCheckedHandler($event)></app-task>
+    </ng-template>
+    
+    <ng-template #listTemplate>Add new Task</ng-template>
+    </div>
+    
+    
+    
