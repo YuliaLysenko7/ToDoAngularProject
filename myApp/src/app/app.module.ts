@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToDoComponent } from './to-do/to-do.component';
 import { HomeComponent } from './home/home.component';
 import { RoutingModuleModule } from './routing-module/routing-module.module';
+import { MyDirectiveDirective } from './my-directive.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { RoutingModuleModule } from './routing-module/routing-module.module';
     TaskComponent,
     ToDoComponent,
     HomeComponent,
+    MyDirectiveDirective,
 
   ],
   imports: [
